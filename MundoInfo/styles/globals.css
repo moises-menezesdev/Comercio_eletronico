@@ -8,7 +8,7 @@ body{
     font-family: 'Arial';
     background-image: radial-gradient(#fff, #c7c7c7);
 }
-
+/* HEADER */
 .header-inner-content{
     max-width: 1300px;
     margin-left: auto;
@@ -28,6 +28,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .logo{
@@ -106,8 +107,8 @@ nav ul li:hover{
 .menu-button{
     display: none;
 }
-/* da uma olhada amanha no header= pq a cor nao ta indo*/
-/*ver sobre a recursividade do site que parece que nao ta indo tbm*/
+
+
 header{
     background-image: radial-gradient(#a3a1a1, #858585);
 }
@@ -157,6 +158,77 @@ header{
     justify-content: center;
 }
 
-.header-botton-rigth img{
-   height: 100px;
+.header-botton-right img {
+    height: 300px; /* Ajuste a altura para o tamanho desejado */
+    width: 400px; /* Altere para o tamanho desejado em pixels */ 
+}  
+
+/* MEDIA QUERIES */
+@media (max-width: 800px){
+   .logo{
+    font-size: 1.2rem;
+   }
+
+   .menu-button{
+    display: block;
+   }
+
+   .header-botton-side{
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+   }
+
+   nav{
+    position: absolute;
+    background-color: #2c2c2c;
+    width: 100%;
+    top: 45px;
+    display: none;
+   }
+   
+   .show-menu nav{
+    display: block;
+   }
+
+   nav ul{
+    flex-direction: column;
+   }
+   
+   nav ul li{
+    text-align: center;
+    padding: 0.8rem;
+   }
+
+
+
 }
+
+/*HEADER*/
+
+/*MAIN CONTENT*/
+.gray-background{
+    background-color: #2c2c2c;
+}
+
+.page-inner-content{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cols{
+    display: grid;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+}
+
+.cols-3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.product-price {
+    display: inline;
+    font-weight: 600;
+}
+

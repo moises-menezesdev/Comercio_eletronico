@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MundoInfo | Ecommerce</title>
+    <title>MundoTech | Ecommerce</title>
     <link rel="stylesheet" href="/styles/globals.css">
 </head>
 <body>
-  <div class="navbar"> 
+  <div class="navbar show-menu"> 
    <div class="header-inner-content">
-     <h1 class="logo">MUNDO<span>INFO</span></h1> 
+     <h1 class="logo">MUNDO<span>TECH</span></h1> 
      <nav>
       <ul>
         <li class="home">Home</li>
@@ -25,7 +25,8 @@
      </div>
    </div>
   </div>
-  <heard>
+
+  <header>
    <div class="header-inner-content">
     <div class="header-botton-side">
       <div class="header-botton-left">
@@ -34,10 +35,47 @@
         <button>Ver Agora! &#8594;</button>
       </div>
       <div class="header-botton-right">
-        <img src="/images/img.computador.jpeg" alt="Notebooks Vostro">
+        <img src="/images/img.computador-removebg-preview.png" alt="Notebooks Vostro">
       </div>
     </div>
    </div>
-  </heard>
+  </header>
+  
+   <!--MAIN CONTENT-->
+   <main>
+    <div class="gray-background">
+      <div class="page-inner-content">
+        <div class="cols cols-3">
+          <img src="/images/products/product-1.2.png" alt="">
+          <img src="/images/products/product-2.1.png" alt="">
+          <img src="/images/products/product-3.1.png.png" alt=""> 
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="page-inner-content">
+        <h3 class="section-title">Produtos Selecionados</h3>
+        <div class="subtitle-underline"></div>
+        <div class="cols cols-4">
+          <div class="product">
+            <img src="/images/products/product-4.png" alt="">
+            <p class="product-name">Combo Gamer Meetion</p>
+             <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+             <p class="product-price">480.00 <span>R$</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+   </main>
+
+  <script>
+    const navbar = document.querySelector(".navbar");
+    const menuButton = document.querySelector(".menu-button");
+
+    menuButton.addEventListener('click', () => {
+      navbar.classList.toggle("show-menu");
+    });
+  </script>
 </body>
 </html>
