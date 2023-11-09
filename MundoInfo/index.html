@@ -57,7 +57,7 @@
       <div class="page-inner-content">
         <h3 class="section-title">Produtos Selecionados</h3>
         <div class="subtitle-underline"></div>
-        <div class="cols cols-4">
+        <div class="cols cols-4" id="lista_prod">
           <div class="product">
             <img src="/images/products/product-4.1.png" alt="">
             <p class="product-name">Combo Gamer – 0542 Bright</p>
@@ -65,24 +65,6 @@
              <p class="product-price">130.00 <span>R$</span></p>
              <button class="add-to-cart-button" onclick="addToCart('Combo Gamer – 0542 Bright', '130.00')">Adicionar ao Carrinho</button>
 
-          </div>
-          <div class="product">
-            <img src="/images/products/product-5.1.png" alt="">
-            <p class="product-name">GPU NV GTX1650 VENTUS XS OC</p>
-             <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-             <p class="product-price">920.00 <span>R$</span></p>
-          </div>
-          <div class="product">
-            <img src="/images/products/product-6.1.png" alt="">
-            <p class="product-name">Controle DualSense - Branco</p>
-             <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-             <p class="product-price">389.89 <span>R$</span></p>
-          </div>
-          <div class="product">
-            <img src="/images/products/product-7.1.png" alt="">
-            <p class="product-name">Cadeira Gamer Profissional TGC12</p>
-             <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-             <p class="product-price">1219.00 <span>R$</span></p>
           </div>
         </div>
       </div>
@@ -121,6 +103,32 @@
    </main>
 
   <script>
+    const produtos = [
+  {
+    id: 1,
+    nome: 'Produto 1',
+    imagem: "/images/products/product-4.1.png",
+    preco: 29.99,
+  },
+  {
+    id: 2,
+    nome: 'Produto 2',
+    imagem: 'caminho/para/imagem2.jpg',
+    preco: 39.99,
+  },
+  {
+    id: 3,
+    nome: 'Produto 3',
+    imagem: 'caminho/para/imagem3.jpg',
+    preco: 49.99,
+  },
+  {
+    id: 4,
+    nome: 'Produto 4',
+    imagem: 'caminho/para/imagem4.jpg',
+    preco: 59.99,
+  },
+];
     let carrinho= []
     function addToCart(productName, productPrice) {
     // Aqui, você pode implementar a lógica para adicionar o produto ao carrinho
@@ -139,6 +147,25 @@
     // Agora, você pode implementar lógica adicional, como exibir uma mensagem de sucesso
     alert(`Produto adicionado ao carrinho: ${productName}`);
 };
+function lista_prod(){
+  const listaProdutos = document.getElementById("#lista_prod");
+
+produtos.forEach(produto => {
+    const li = document.createElement('li');
+li.innerHTML = `
+<div class="product">
+            <img src="/images/products/product-4.1.png" alt="">
+            <p class="product-name">Combo Gamer – 0542 Bright</p>
+             <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+             <p class="product-price">130.00 <span>R$</span></p>
+             <button class="add-to-cart-button" onclick="addToCart('Combo Gamer – 0542 Bright', '130.00')">Adicionar ao Carrinho</button>
+          </div>
+` 
+      
+    listaProdutos.appendChild(li);
+});
+}
+
 
     const navbar = document.querySelector(".navbar");
     const menuButton = document.querySelector(".menu-button");
@@ -146,6 +173,7 @@
     menuButton.addEventListener('click', () => {
       navbar.classList.toggle("show-menu");
     });
+    lista_prod()
   </script>
 </body>
 </html>
