@@ -63,6 +63,8 @@
             <p class="product-name">Combo Gamer – 0542 Bright</p>
              <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
              <p class="product-price">130.00 <span>R$</span></p>
+             <button class="add-to-cart-button" onclick="addToCart('Combo Gamer – 0542 Bright', '130.00')">Adicionar ao Carrinho</button>
+
           </div>
           <div class="product">
             <img src="/images/products/product-5.1.png" alt="">
@@ -114,11 +116,30 @@
              <p class="product-price">1219.00 <span>R$</span></p>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
    </main>
 
   <script>
+    let carrinho= []
+    function addToCart(productName, productPrice) {
+    // Aqui, você pode implementar a lógica para adicionar o produto ao carrinho
+    // Pode ser um array, um objeto, ou até mesmo uma chamada a uma API para gerenciar o carrinho.
+
+    // Por exemplo, você pode usar um array para armazenar os itens do carrinho:
+    const cartItem = {
+        name: productName,
+        price: productPrice,
+    };
+
+    // Adicione o item ao carrinho (isso é um exemplo, você pode adaptar conforme necessário)
+    carrinho.push(cartItem);
+    console.log (carrinho);
+
+    // Agora, você pode implementar lógica adicional, como exibir uma mensagem de sucesso
+    alert(`Produto adicionado ao carrinho: ${productName}`);
+};
+
     const navbar = document.querySelector(".navbar");
     const menuButton = document.querySelector(".menu-button");
 
