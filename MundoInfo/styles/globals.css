@@ -293,3 +293,31 @@ main{
     font-weight: 600;
 
 }
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #2c2c2c;
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+
+}
+.cart .cart-top{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.cart .cart-list{
+    display: flex;
+    flex-direction: column;
+}
+.cart .cart-item{
+    width: 100px;
+    display: flex;
+}
+.cart .cart-item img{
+    width: 100%;
+}
