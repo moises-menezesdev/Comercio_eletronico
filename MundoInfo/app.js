@@ -3,25 +3,25 @@ const produtos = [
       id: 1,
       nome: 'Combo Gamer – 0542 Bright',
       imagem: "/images/products/product-4.1.png",
-      preco: 29.99,
+      preco:130.99,
     },
     {
       id: 2,
       nome: 'GPU NV GTX1650 VENTUS XS OC',
       imagem: '/images/products/product-5.1.png',
-      preco: 39.99,
+      preco:920.89,
     },
     {
       id: 3,
-      nome: 'Produto 3',
-      imagem: 'caminho/para/imagem3.jpg',
-      preco: 49.99,
+      nome: 'Controle DualSense - Branco',
+      imagem: '/images/products/product-6.1.png',
+      preco: 389.89,
     },
     {
       id: 4,
-      nome: 'Produto 4',
-      imagem: 'caminho/para/imagem4.jpg',
-      preco: 59.99,
+      nome: 'Cadeira Gamer Profissional TGC12',
+      imagem: '/images/products/product-7.1.png',
+      preco: 1219.65,
     },
   ];
   let cart = []
