@@ -25,6 +25,25 @@ const produtos = [
   },
 ];
 
+function FinalizarCompra() {
+  // Simula a finalização da compra (você pode adicionar lógica adicional aqui, como enviar dados para um servidor)
+  console.log("Compra Finalizada!");
+  
+  // Limpa o carrinho após a compra ser finalizada
+  clearCart();
+  
+  // Exibe a mensagem de compra finalizada na tela (você pode criar um elemento HTML para exibir a mensagem)
+  alert("Compra Finalizada! Obrigado por escolher MundoTech!");
+
+  // Atualiza a exibição do carrinho após a compra ser finalizada
+  listarProdutosCarrinho();
+}
+
+// Adiciona um event listener ao botão "Finalizar Compra"
+const finalizarCompraButton = document.querySelector('.primary-button');
+finalizarCompraButton.addEventListener('click', FinalizarCompra);
+
+
 let cart = [];
 
 function addToCart(id) {
