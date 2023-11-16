@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>Login e Cadastro</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="tab">
+        <a href="#" onclick="changeTab('login')">Login</a>
+        <a href="#" onclick="changeTab('signup')">Cadastro</a>
+    </div>
+
+    <div class="form-wrap">
+        <!-- Formulário de Login -->
+        <form id="loginForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Formulário de Cadastro -->
+        <form id="signupForm" style="display:none;">
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>
