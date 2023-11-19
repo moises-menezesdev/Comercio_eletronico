@@ -46,6 +46,14 @@ function FinalizarCompra() {
 const finalizarCompraButton = document.querySelector('.primary-button');
 finalizarCompraButton.addEventListener('click', FinalizarCompra);
 
+// Adiciona um event listener ao elemento "Conta"
+const contaElement = document.getElementById('conta');
+contaElement.addEventListener('click', redirectToLogin);
+
+// Função para redirecionar para a página de login
+function redirectToLogin() {
+    window.location.href = 'login.html'; // Substitua 'login.html' pelo caminho correto da sua página de login
+}
 
 
 let cart = [];
