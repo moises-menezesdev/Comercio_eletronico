@@ -322,4 +322,16 @@ main{
     width: 100%;
 }
 
-  
+  /* FOOTER */
+.footer-content{
+    display: flex;
+    align-items: center;
+    color: #8f8f8f;
+    padding: 4rem 1rem;  
+}
+
+.donwload-options >*{
+    margin: 1rem 0;
+}
+
+/* FOOTER*/
