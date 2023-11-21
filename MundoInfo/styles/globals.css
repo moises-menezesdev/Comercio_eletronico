@@ -327,11 +327,67 @@ main{
     display: flex;
     align-items: center;
     color: #8f8f8f;
-    padding: 4rem 1rem;  
+    padding: 4rem 1rem;
+    gap: 2rem;   
 }
 
 .donwload-options >*{
     margin: 1rem 0;
 }
+
+.donwload-options >p:first-child{
+    font-weight: bold;
+    color: #fff;
+}
+
+.donwload-options>div{
+    display: flex;
+}
+
+.donwload-options>div img{
+    width: 180px;
+}
+
+.logo-footer{
+    text-align: center;
+}
+
+.links-footer h3{
+    color: #fff;
+    margin-bottom: 0.8rem;
+
+}
+
+.links-footer ul{
+    list-style: none;
+}
+
+.links-footer ul li{
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 800px){
+     .footer-content{
+        display: inline;
+        font-size: 0.8rem;
+     }
+
+     .footer-content>div{
+        padding: 1rem;
+     }
+
+     .donwload-options>div{
+        display: inline;
+     }
+
+     .donwload-options>div img{
+        width: 120px;
+     }
+}
+
+
 
 /* FOOTER*/
