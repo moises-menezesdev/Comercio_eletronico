@@ -13,7 +13,7 @@
      <nav>
       <ul>
         <li class="home">Home</li>
-        <li class="produtos">Produtos</li>     
+        <li id="produtos-button" class="produtos">Produtos</li>     
         <li class="sobre">Sobre</li>  
         <li class="contato">Contato</li> 
         <li id="conta" class="conta">Conta</li>
@@ -54,7 +54,7 @@
     </div>
 
     <div>
-      <div class="page-inner-content">
+      <div class="page-inner-content" id="produtos-selecionados">
         <h3 class="section-title">Produtos Selecionados</h3>
         <div class="subtitle-underline"></div>
         <div class="cols cols-4" id="lista_prod">
@@ -136,5 +136,22 @@
 
 
 <script src="app.js"></script>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+      var produtosButton = document.querySelector(".produtos");
+
+      produtosButton.addEventListener("click", function() {
+          // Obtém a posição (offsetTop) da área de "Produtos Selecionados"
+          var produtosSelecionadosOffsetTop = document.getElementById("produtos-selecionados").offsetTop;
+
+          // Rola a página até a área de "Produtos Selecionados"
+          window.scrollTo({
+              top: produtosSelecionadosOffsetTop,
+              behavior: "smooth" // Adiciona um efeito de rolagem suave
+          });
+      });
+  });
+</script>
 </body>
 </html>

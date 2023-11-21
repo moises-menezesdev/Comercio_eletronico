@@ -106,7 +106,7 @@ function listarProdutosCarrinho() {
 
     cartListEl.appendChild(li);
   });
-
+   
   const cartTotalEl = document.getElementById('cart-total');
   const total = calcularTotalCarrinho();
   cartTotalEl.textContent = `Total: R$ ${total.toFixed(2)}`;
